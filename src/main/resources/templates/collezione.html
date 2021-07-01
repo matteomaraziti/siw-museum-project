@@ -3,8 +3,8 @@
 	<link th:href="@{/css/basic.css}" rel="stylesheet">
 <body>
 	<nav><p class="titolo">INTERNATIONAL MUSEUM</p></nav>
-    <div style="display: flex; justify-content: center;">
-    	<div th:if="${collezione}" th:object="${collezione}" class="box" style="background-color: khaki">
+    <div style="display: flex; justify-content: center;" >
+    	<div class="box" style="background-color: khaki" th:if="${collezione}" th:object="${collezione}">
 		<p><b>LA COLLEZIONE:</b></p>
 			Nome: <span th:text="*{nome}">qui-va-nome</span><br>
 			Descrizione: <span th:text="*{descrizione}">qui-va-descrizione</span><br>
@@ -22,8 +22,8 @@
 			</ul>
 		</div>
 		<br>
-		<div class="box" style="background-color: lightcoral;">
-			<div th:if="${credentials.role == 'ADMIN'}">
+		<div class="box" style="background-color: lightcoral;" th:if="${credentials.role == 'ADMIN'}">
+			<div>
 				<p><b>AGGIUNGI OPERA A COLLEZIONE</b></p>
 				<form th:action="@{'/admin/addOperaACollezione' + '/' + ${collezione.id}}" method="POST" >
 					<select name="opera" id="opera">
@@ -38,7 +38,7 @@
 				</form>
 			</div>
 			<div th:if="${credentials.role == 'ADMIN'}">
-				<p><b>RIMUOVI OPERA A COLLEZIONE</b></p>
+				<p><b>RIMUOVI OPERA DA COLLEZIONE</b></p>
 				<form th:action="@{'/admin/rimuoviOpera' + '/' + ${collezione.id}}" method="POST" >
 					<select name="opera" id="opera">
 					<option value="">---Opera---</option>
@@ -58,9 +58,9 @@
     </div>
 	<div class="flex-container2">
 		<div>
-			<form th:if="${credentials.role == 'ADMIN'}" th:action="@{'/admin/eliminaOpera' + '/' + ${opera.id}}"
+			<form th:if="${credentials.role == 'ADMIN'}" th:action="@{'/admin/eliminaCollezione' + '/' + ${collezione.id}}"
 				method="POST">
-				<button class="sub-button" type="submit" th:text="#{elimina.opera}"></button>
+				<button class="sub-button" type="submit" th:text="#{elimina.collezione}"></button>
 			</form>
 		</div>
 

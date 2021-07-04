@@ -146,6 +146,14 @@ a:visited {
     padding-left: 10px;
     padding-right: 10px;
 }
+.el-lista:hover{
+	background-color: burlywood
+}
+.el-lista:active{
+	background-color: brown;
+	box-shadow: 0 5px maroon;
+	transform: translateY(4px);
+}
 .info{
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 50px;

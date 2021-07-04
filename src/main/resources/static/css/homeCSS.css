@@ -63,18 +63,23 @@ footer{
 }
 
 
-.button{
-	background-color: whitesmoke; 
-	box-shadow: 0 9px lightgrey;
-    color: #fff;
-	text-shadow: 0 0 3px black, 0 0 5px black;
-    padding: 6px 30px;
-    border-radius: 100px 4%;
-    justify-content: center;
-    margin: 10px;
-    min-width: 170px;
+.sub-button {
+    min-width: 140px;
     min-height: 35px;
+    border-radius: 100px 4%;
+	border: transparent;
+	background-color: whitesmoke; 
+	box-shadow: 0 6px lightgrey;
+    margin: 10px;
     font-size: 20px;
 	font-weight: bold;
 	font-family:Arial, Helvetica, sans-serif;
 }
+.sub-button:hover {background-color: darkgray}
+  
+.sub-button:active {
+	background-color: gray;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+

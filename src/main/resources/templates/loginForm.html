@@ -19,10 +19,14 @@
 				<span><input name="password" type="password" required /></span>
 			</div>
 			<div>
-				<span><button class="sub-button" type="submit" >Login</button></span>
+
+				<span><button class="sub-button" type="submit" th:text="#{index.login}">Login</button></span>
+				<span><button type="reset" class="sub-button"th:text="#{cancella}">Cancella</button></span>
+				
 			</div>
 		</div>
 	</form>
+	<span><a href="/index"><button class="sub-button"th:text="#{indietro}">Home</button></a></span>
 </body>
 
 </html>

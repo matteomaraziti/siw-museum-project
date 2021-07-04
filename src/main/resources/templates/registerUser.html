@@ -42,9 +42,12 @@
                 </tr>
             </table>
             <div>
-                        <button class="sub-button" type="submit">Registra</button>
+                        <button class="sub-button" type="submit"th:text="#{index.register}">Registra</button>
+                        <span><button type="reset" class="sub-button"th:text="#{cancella}">Cancella</button></span>
+						
                     </div>
         </form>
+        <span><a href="/index"><button class="sub-button"th:text="#{indietro}">Home</button></a></span>
     </div>
 </body>
 

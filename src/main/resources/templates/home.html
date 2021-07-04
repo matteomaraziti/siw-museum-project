@@ -13,23 +13,23 @@
         <div>
             <span th:if="${credentials.role == 'ADMIN'}">
                 <a href="/admin/adminPanel">
-                    <button class="button" style="background-color:gold ;box-shadow:0 9px goldenrod;">Admin Panel</button>
+                    <button class="button" style="background-color:gold ;box-shadow:0 9px goldenrod;" th:text="#{pannello}" >Admin Panel</button>
                 </a>
             </span>
         </div>
         <div>
             <a href="artista">
-                <button class="button" style="background-color: crimson;box-shadow: 0 9px darkred;">Elenco artisti
+                <button class="button" style="background-color: crimson;box-shadow: 0 9px darkred;" th:text="#{elenco.artisti}">Elenco artisti
                 </button>
             </a>
         </div>
 
         <div>
-             <a href="collezione"><button class="button" style="background-color: green; box-shadow: 0 9px darkgreen;">Elenco collezioni</button></a>
+             <a href="collezione"><button class="button" style="background-color: green; box-shadow: 0 9px darkgreen;"th:text="#{elenco.collezioni}">Elenco collezioni</button></a>
         </div>
 
         <div>
-            <a href="opere"><button class="button" style="background-color: deepskyblue; box-shadow: 0 9px dodgerblue;"> Elenco opere</button></a>
+            <a href="opere"><button class="button" style="background-color: deepskyblue; box-shadow: 0 9px dodgerblue;"th:text="#{elenco.opere}"> Elenco opere</button></a>
         </div>
         <div>
            <a th:href="@{/logout}"> <button class="button" style="background-color: whitesmoke; box-shadow: 0 9px lightgrey;"> Logout</button></a>
